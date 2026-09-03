@@ -16,7 +16,23 @@ export default defineConfig({
       lang: 'fr',
       themeConfig: {
         nav: [
-          { text: 'Accueil', link: '/fr/' }
+          { text: 'Accueil', link: '/fr/' },
+          { text: 'Docs Développeur', link: '/fr/guides/quickstart' },
+          { text: 'Centre d\'Aide', link: '/fr/help/user-management' }
+        ],
+        sidebar: [
+          {
+            text: 'Docs Développeur (ex-VuePress)',
+            items: [
+              { text: 'Démarrage Auth', link: '/fr/guides/quickstart' }
+            ]
+          },
+          {
+            text: 'Centre d\'Aide (ex-DITA-OT)',
+            items: [
+              { text: 'Gestion des Utilisateurs', link: '/fr/help/user-management' }
+            ]
+          }
         ]
       }
     }
