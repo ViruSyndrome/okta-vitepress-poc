@@ -30,6 +30,8 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Install dependencies
         run: npm install
+      - name: Run Automated Localization Pipeline
+        run: npm run l10n:sync
       - name: Build with VitePress
         run: npm run docs:build
       - name: Upload artifact
