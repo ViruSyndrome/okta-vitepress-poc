@@ -1,16 +1,18 @@
 # Quickstart Guide
 
-This is a sample markdown page pulled from the Okta Developer documentation structure.
+This page demonstrates how Developer Documentation renders inside the VitePress framework, including native syntax highlighting and dark mode out-of-the-box.
 
-## Overview
-In a real migration, we would use a conversion script to adapt the existing VuePress frontmatter to VitePress.
+## Automation & Tooling
+To migrate thousands of legacy Markdown pages, the engineering team would utilize automated conversion scripts. A sample node script for frontmatter conversion is included in this repository at `/scripts/migrate-frontmatter.js`.
+
+## Example Code Snippet
 
 ```javascript
-// Example Okta Auth script
-import { OktaAuth } from '@okta/okta-auth-js';
+// Example Authentication logic
+import { AuthClient } from '@acme-corp/auth-js';
 
-const authClient = new OktaAuth({
-  issuer: 'https://{yourOktaDomain}/oauth2/default',
+const client = new AuthClient({
+  issuer: 'https://auth.acmecorp.com/oauth2/default',
   clientId: '{clientId}',
   redirectUri: window.location.origin + '/login/callback'
 });

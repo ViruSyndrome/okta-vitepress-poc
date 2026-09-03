@@ -1,22 +1,21 @@
-# User Management (Help Center)
+# Acme Corp: User Management
 
-This page demonstrates a mock migration of content from the legacy **help.okta.com** (DITA-OT) architecture into a unified Markdown (MDX) framework alongside the developer docs.
+*Note: This page contains fictional, illustrative content to demonstrate the structural migration from a DITA-OT Help Center into a unified Markdown framework.*
 
 ## Add a user manually
 
-As an Okta administrator, you can manually add users to your org. This is useful for exception cases or small organizations.
+As an Acme Corp administrator, you can manually add users to your organizational directory. 
 
 ### Prerequisites
-* You must be signed in as a Super Admin or Org Admin.
-* Ensure you have enough available licenses in your Okta subscription.
+* You must be signed in as an Enterprise Admin.
+* Ensure you have available seats in your billing dashboard.
 
 ### Procedure
-1. In the Admin Console, go to **Directory > People**.
-2. Click **Add Person**.
-3. In the dialog box, enter the user's **First name**, **Last name**, and **Username**.
-4. Select the user's primary email address.
-5. Click **Save**.
+1. In the Acme Console, go to **Directory > Personnel**.
+2. Click **Provision New User**.
+3. In the dialog box, enter the user's details and assign a role.
+4. Click **Save & Send Invite**.
 
-::: tip Note
-By moving DITA-OT content into VitePress, we eliminate complex XML authoring overhead and allow writers to collaborate in standard Markdown, radically accelerating content velocity.
+::: info Architectural Note
+By moving DITA-OT content into VitePress, we evaluate if modern Markdown (MDX) can provide the necessary content reuse and localization capabilities, while significantly lowering the authoring barrier-to-entry for open-source contributors.
 :::

@@ -2,9 +2,9 @@
 layout: home
 
 hero:
-  name: "Okta Unified Docs"
+  name: "Unified Docs Strategy"
   text: "VitePress Architecture PoC"
-  tagline: "Unifying DITA-OT (Help) and VuePress (Developer) into a single, blazing-fast SSG."
+  tagline: "Evaluating a unified Docs-as-Code architecture for enterprise platforms."
   actions:
     - theme: brand
       text: View Developer Docs
@@ -14,8 +14,14 @@ hero:
       link: /help/user-management
 ---
 
-## The Unification Strategy
-This Proof of Concept demonstrates the long-term architectural vision for Okta's Documentation Tools.
-* **Kill the Silos:** Instead of maintaining two entirely separate toolchains (DITA-OT for help.okta.com and VuePress for developer.okta.com), this PoC unifies both into a single Markdown-based architecture.
-* **Blazing Fast Builds:** Powered by Vite, pre-rendered HTML is generated significantly faster than Webpack-based SSGs or XML pipelines.
-* **Developer & Writer Velocity:** Engineers can maintain one modern tech stack, while writers gain the velocity of Markdown over complex XML authoring.
+## Architectural Evaluation
+This Proof of Concept demonstrates an evaluation path for unifying disparate documentation toolchains into a single, high-velocity SSG.
+
+* **Build Time Benchmarks:** A local VitePress build of this scaffold completed in **2.30 seconds**. Compared to legacy Webpack-based SSGs (which can take 15+ minutes at scale), Vite-based frameworks radically reduce CI/CD bottlenecking.
+* **Evaluating DITA vs. Markdown:** DITA-OT provides unparalleled strengths for enterprise localization (XLIFF/translation memory) and content reuse (conrefs). However, it introduces steep authoring curves. This PoC evaluates the tradeoffs of moving toward a unified MDX ecosystem, assessing whether modern Markdown extensions can replace DITA's reuse capabilities without sacrificing localization integrity.
+
+<br>
+<hr>
+<br>
+
+*Disclaimer: This is an independent architectural proof-of-concept created by Vinod J Isaac for interview demonstration purposes. It is not affiliated with, maintained by, or endorsed by Okta, Inc.*
