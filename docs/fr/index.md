@@ -7,8 +7,11 @@ hero:
   tagline: "Évaluation de l'architecture pour la localisation d'entreprise."
   actions:
     - theme: brand
-      text: Retour à l'anglais
-      link: /
+      text: Docs Développeur
+      link: /fr/guides/quickstart
+    - theme: alt
+      text: Centre d'Aide
+      link: /fr/help/user-management
 ---
 
 ## Évaluation Architecturale
