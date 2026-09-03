@@ -2,11 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const SOURCE_DIR = path.join(__dirname, '../docs');
-const TARGET_LANG = 'fr';
-const TARGET_DIR = path.join(__dirname, ../docs/$TARGET_LANG);
+const LOCALES = ['fr', 'de'];
 
-// A mock localization pipeline demonstrating how an EM would automate MDX translation
-console.log([L10n Pipeline] Initiating sync for locale: $TARGET_LANG...);
+console.log(`[L10n Pipeline] Initiating sync for locales: ${LOCALES.join(', ')}...`);
 
 function ensureDirectoryExists(filePath) {
     const dirname = path.dirname(filePath);
@@ -15,9 +13,9 @@ function ensureDirectoryExists(filePath) {
     fs.mkdirSync(dirname);
 }
 
-function syncTranslations(subDir) {
+function syncTranslations(subDir, lang) {
     const sourcePath = path.join(SOURCE_DIR, subDir);
-    const targetPath = path.join(TARGET_DIR, subDir);
+    const targetPath = path.join(SOURCE_DIR, lang, subDir);
 
     if (!fs.existsSync(sourcePath)) return;
 
@@ -27,21 +25,27 @@ function syncTranslations(subDir) {
             const originalContent = fs.readFileSync(path.join(sourcePath, file), 'utf8');
             
             // Mock Translation API Call: 
-            // In production, this would parse the Markdown AST and send text nodes to Crowdin/Smartling.
-            let translatedContent = originalContent.replace(/Acme Corp/g, 'Acme Corp (Français)');
+            let translatedContent = originalContent;
+            if (lang === 'fr') {
+                translatedContent = translatedContent.replace(/Acme Corp/g, 'Acme Corp (FranÃ§ais)');
+            } else if (lang === 'de') {
+                translatedContent = translatedContent.replace(/Acme Corp/g, 'Acme Corp (Deutsch)');
+            }
             
             // Write localized file
             const destFile = path.join(targetPath, file);
             ensureDirectoryExists(destFile);
             fs.writeFileSync(destFile, translatedContent, 'utf8');
             
-            console.log([L10n Pipeline] Generated localized file: /$TARGET_LANG/$subDir/$file);
+            console.log(`[L10n Pipeline] Generated localized file: /${lang}/${subDir}/${file}`);
         }
     });
 }
 
-// Sync specific documentation directories
-syncTranslations('guides');
-syncTranslations('help');
+// Sync specific documentation directories for all locales
+LOCALES.forEach(lang => {
+    syncTranslations('guides', lang);
+    syncTranslations('help', lang);
+});
 
-console.log([L10n Pipeline] Sync complete. Translated files ready for VitePress build.);
+console.log(`[L10n Pipeline] Sync complete. Translated files ready for VitePress build.`);

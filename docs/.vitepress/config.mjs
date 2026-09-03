@@ -7,13 +7,9 @@ export default defineConfig({
   
   // Localization Routing Strategy
   locales: {
-    root: {
-      label: 'English',
-      lang: 'en'
-    },
+    root: { label: 'English', lang: 'en' },
     fr: {
-      label: 'Français',
-      lang: 'fr',
+      label: 'Français', lang: 'fr',
       themeConfig: {
         nav: [
           { text: 'Accueil', link: '/fr/' },
@@ -23,15 +19,31 @@ export default defineConfig({
         sidebar: [
           {
             text: 'Docs Développeur (ex-VuePress)',
-            items: [
-              { text: 'Démarrage Auth', link: '/fr/guides/quickstart' }
-            ]
+            items: [{ text: 'Démarrage Auth', link: '/fr/guides/quickstart' }]
           },
           {
             text: 'Centre d\'Aide (ex-DITA-OT)',
-            items: [
-              { text: 'Gestion des Utilisateurs', link: '/fr/help/user-management' }
-            ]
+            items: [{ text: 'Gestion des Utilisateurs', link: '/fr/help/user-management' }]
+          }
+        ]
+      }
+    },
+    de: {
+      label: 'Deutsch', lang: 'de',
+      themeConfig: {
+        nav: [
+          { text: 'Startseite', link: '/de/' },
+          { text: 'Entwickler-Docs', link: '/de/guides/quickstart' },
+          { text: 'Hilfe-Center', link: '/de/help/user-management' }
+        ],
+        sidebar: [
+          {
+            text: 'Entwickler-Docs (ex-VuePress)',
+            items: [{ text: 'Auth Schnellstart', link: '/de/guides/quickstart' }]
+          },
+          {
+            text: 'Hilfe-Center (ex-DITA-OT)',
+            items: [{ text: 'Benutzerverwaltung', link: '/de/help/user-management' }]
           }
         ]
       }
@@ -47,15 +59,11 @@ export default defineConfig({
     sidebar: [
       {
         text: 'Developer Docs (ex-VuePress)',
-        items: [
-          { text: 'Auth Quickstart', link: '/guides/quickstart' }
-        ]
+        items: [{ text: 'Auth Quickstart', link: '/guides/quickstart' }]
       },
       {
         text: 'Help Center (ex-DITA-OT)',
-        items: [
-          { text: 'User Management', link: '/help/user-management' }
-        ]
+        items: [{ text: 'User Management', link: '/help/user-management' }]
       }
     ]
   }
