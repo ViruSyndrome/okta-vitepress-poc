@@ -2,20 +2,20 @@
 layout: home
 
 hero:
-  name: "Okta Developer Docs"
-  text: "VitePress Migration PoC"
-  tagline: "Demonstrating sub-second build times for developer.okta.com"
+  name: "Okta Unified Docs"
+  text: "VitePress Architecture PoC"
+  tagline: "Unifying DITA-OT (Help) and VuePress (Developer) into a single, blazing-fast SSG."
   actions:
     - theme: brand
-      text: Get Started
+      text: View Developer Docs
       link: /guides/quickstart
     - theme: alt
-      text: View on GitHub
-      link: https://github.com/okta/okta-developer-docs
+      text: View Help Center
+      link: /help/user-management
 ---
 
-## Why VitePress?
-This Proof of Concept demonstrates migrating **developer.okta.com** from legacy VuePress 1.x to modern VitePress.
-* **Instant Server Start:** Powered by Vite, the dev server starts instantly regardless of site size.
-* **Blazing Fast Builds:** Pre-rendered HTML is generated significantly faster than Webpack-based VuePress 1.x.
-* **Familiar Vue Architecture:** Easy migration path for the existing engineering team.
+## The Unification Strategy
+This Proof of Concept demonstrates the long-term architectural vision for Okta's Documentation Tools.
+* **Kill the Silos:** Instead of maintaining two entirely separate toolchains (DITA-OT for help.okta.com and VuePress for developer.okta.com), this PoC unifies both into a single Markdown-based architecture.
+* **Blazing Fast Builds:** Powered by Vite, pre-rendered HTML is generated significantly faster than Webpack-based SSGs or XML pipelines.
+* **Developer & Writer Velocity:** Engineers can maintain one modern tech stack, while writers gain the velocity of Markdown over complex XML authoring.
