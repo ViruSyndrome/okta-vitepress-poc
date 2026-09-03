@@ -4,6 +4,24 @@ export default defineConfig({
   title: "Okta Unified Docs (PoC)",
   description: "Unifying Help & Developer Docs in VitePress",
   base: '/okta-vitepress-poc/',
+  
+  // Localization Routing Strategy
+  locales: {
+    root: {
+      label: 'English',
+      lang: 'en'
+    },
+    fr: {
+      label: 'Français',
+      lang: 'fr',
+      themeConfig: {
+        nav: [
+          { text: 'Accueil', link: '/fr/' }
+        ]
+      }
+    }
+  },
+
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
