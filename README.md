@@ -35,3 +35,10 @@ npm run docs:build
 
 ---
 *Disclaimer: This is an independent architectural proof-of-concept created by Vinod J Isaac for interview demonstration purposes. It is not affiliated with, maintained by, or endorsed by Okta, Inc.*
+
+## Automated Localization (L10n) Pipeline
+To address the challenges of localizing Markdown vs. DITA-OT, this PoC includes a mock L10n pipeline. 
+Run the following command to simulate an automated translation script parsing the English Markdown AST and generating the localized `/fr/` routing structure:
+```bash
+npm run l10n:sync
+```
